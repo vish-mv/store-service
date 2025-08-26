@@ -1,0 +1,87 @@
+openapi: 3.0.3
+info:
+  title: Store Service API
+  description: API documentation for the Store Service built with Node.js, Express, and Firebase Admin SDK.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local server
+
+paths:
+  /health:
+    get:
+      summary: Health Check
+      description: Checks the health of the service.
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+
+  /items:
+    get:
+      summary: Get All Items
+      description: Retrieves all items from the store.
+      responses:
+        '200':
+          description: List of all items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+
+  /items/filter:
+    get:
+      summary: Get Filtered Items
+      description: Retrieves items based on category and/or subCategory filters.
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+          description: Filter by item category
+          required: false
+        - in: query
+          name: subCategory
+          schema:
+            type: string
+          description: Filter by item sub-category
+          required: false
+      responses:
+        '200':
+          description: List of filtered items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        id:
+          type: string
+          example: item1Id
+        name:
+          type: string
+          example: Item 1
+        brand:
+          type: string
+          example: Brand 1
+        category:
+          type: string
+          example: Electronics
+        subCategory:
+          type: string
+          example: Phones
