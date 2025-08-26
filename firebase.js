@@ -1,3 +1,4 @@
+const admin = require("firebase-admin");
 const fs = require('fs');
 let keyPath = '/firebase-key.json';
 
