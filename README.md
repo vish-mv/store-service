@@ -46,12 +46,14 @@ This is a simple store service built with Node.js, Express, and Firebase Admin S
             {
                 "id": "item1Id",
                 "name": "Item 1",
+                "brand": "Brand 1",
                 "category": "Electronics",
                 "subCategory": "Phones"
             },
             {
                 "id": "item2Id",
                 "name": "Item 2",
+                "brand": "Brand 2",
                 "category": "Books",
                 "subCategory": "Fiction"
             }
@@ -75,7 +77,7 @@ This is a simple store service built with Node.js, Express, and Firebase Admin S
             {
                 "id": "item1Id",
                 "name": "Item 1",
-                "brand": "Brand 1"
+                "brand": "Brand 1",
                 "category": "Electronics",
                 "subCategory": "Phones"
             }
