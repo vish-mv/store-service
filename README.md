@@ -21,7 +21,7 @@ This is a simple store service built with Node.js, Express, and Firebase Admin S
     ```bash
     npm start
     ```
-    The server will run on `http://localhost:5000`.
+    The server will run on `http://localhost:9090`.
 
 ## API Endpoints
 
@@ -69,8 +69,8 @@ This is a simple store service built with Node.js, Express, and Firebase Admin S
         *   `subCategory` (optional): Filter by item subCategory.
     *   **Example Request:**
         `http://localhost:500-/items/filter?category=electronics&subCategory=laptop`
-        `http://localhost:5000/items/filter?category=electronics`
-        `http://localhost:5000/items/filter?subCategory=laptop`
+        `http://localhost:9090/items/filter?category=electronics`
+        `http://localhost:9090/items/filter?subCategory=laptop`
     *   **Response:** An array of filtered item objects.
         ```json
         [

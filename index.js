@@ -2,7 +2,7 @@ const express = require("express");
 const itemsRoutes = require("./routes/items");
 
 const app = express();
-const PORT = 5000;
+const PORT = 9090;
 
 app.use(express.json());
 app.use("/", itemsRoutes);
